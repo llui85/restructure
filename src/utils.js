@@ -16,7 +16,8 @@ export function resolveLength(length, stream, parent) {
   }
 
   if (isNaN(res)) {
-    throw new Error('Not a fixed size');
+    console.warn('restructure.utils: Not a fixed size. Error overridden, returning 0');
+    return 0;
   }
 
   return res;
